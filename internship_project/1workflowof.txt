@@ -1,0 +1,110 @@
+
+
+
+
+{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{   INTERNSHIP PROJECT: BIRTH CERTIFICATE ISSUENCE }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+
+main Users of Projcts : 1) Hospital manager , 
+                        2) municipality manager , 
+                        3) Public who want Birth Certificate
+
+file Required : 1) index.php (for public to request birth certificate ) 
+                2) dataconnection.php (for Connection of the data)
+                3) database.php (for query and logic function)
+                4) hospital.php (for record show and manipulate)
+                5) municipality.php (for record show and manipulate)
+                6) requestvalidation.php (for all the validation of documents uploaded by the public)
+
+Extra file : 1) login.php (for hospital and municipality)
+             2) javascript
+             3) CSS
+             4) images folders (for storing images)
+
+
+NORMAL STEPS FOR WORK ::::::::-------
+
+step-1 : jyare new user ave tyare pela te potano data fill karine pela request karse municipality ne.
+step-2 : now municipality ni screen ma data display thase.
+step-3 : municipality have only one button that send for verification to the hospital. 
+step-4 : badhoj data hospoital ni screen ma display thase je municipality e request mate apyo chhe te .
+step-5 : now hospital have two options that approved and Reject.
+step-6 : jo data approved thay to municipality ni screen ma data status ma data approved show thase.
+step-7 : jo reject thase to data rejected chhe tem municipality ni screeen pan dekhase. 
+
+
+LOGICAL STEPS FOR WORK :::::::::------
+
+for step-1 : index.php
+
+            ==> table format columns
+                ==> Full name 
+                ==> Date of Birth
+                ==> Address details
+                ==> uploaded Document (proof of documents in images file)
+                ==> submit button
+
+for step-2 : municipality.php
+
+            ==> table format columns
+                ===> fullname
+                ===> Date of Birth
+                ===> Address details
+                ===> uploaded Document (proof of documents in images file)
+                ===> verification button
+              
+        Query logic :- fetach data from database 
+                    :- display query 
+                    :- update query
+
+                ===> status of varification requested to hospital   
+
+for step-3 : hospital.php
+            
+            ==> table format columns
+                ===> fullname
+                ===> Date of Birth
+                ===> Address details
+                ===> uploaded Document (proof of documents in images file)
+                ===> Decision button
+                            ====> approved
+                            ====> rejected
+                ===> submit button(final Decision button)
+
+        Query logic :- fetach data id that given from municipality file and fetch that data only from database.
+                    :- display query 
+                    :- update query
+
+                ===> send response to municipality and update the record that stored in database
+
+
+
+DATABASE COLUMNS : 
+            1)name
+            2)Date
+            3)Address
+            4)Document PATH
+            5)status
+            6)id
+
+for step-4 : database.php 
+
+        query logic :- INSERT INTO DATABASE
+                    :- UPDATE INTO DATABASE
+                    :- DISPLAY FROM DATABASE
+                    :- FILTERED DATA INSERT IN TO DATABASE LOGIC (SO DATA CAN`T BE REPEATED)
+
+for step-5 : dataconnection.php
+
+        query logic :- Connection file
+                    :- logic for data validation
+
+                    { create 2 function that one validate the data and second one is  close the database }
+
+for step-6 : requestvalidation.php
+        query logic :- uploaded images are in which format that validate and validate the file size 
+                    :- Also make first working php file because the logic of { DATA INSERTING START FROM THIS }
+
+
+
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++    BEST OF LUCK  YUVRAJ  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
